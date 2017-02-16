@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <style>
+        body{
+            margin:0px 0px;
+            background-color: #f1f2f3;
+        }
+        ul,figure,h3,p{
+            list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+        h3{
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .clear{
+            overflow:hidden;
+        }
+        .title{
+            line-height:61px;
+            text-align:center;
+            font-size:17px;
+            color:#4c4c4c;
+           /* border:1px solid red;*/
+        }
+    .task1{
+        display: table;
+        margin-bottom:20px;
+        margin-right:20px;
+        width:100%;
+    }
+    .task1-item{
+        display:table-cell;
+        padding-left: 10px;
+        width: 33.3333%;
+    }
+    .item2{
+        width: 50%;
+    }
+     .task1-item-content{
+         background-image:url(../../aset/example4/album.png);
+         background-repeat: no-repeat;
+         background-size: contain;
+         padding-top:100%;
+         margin-bottom: 10px;
+     }
+     .task1-item-title{
+         text-align: center;
+     }
+    .task1-item-text{
+        max-width: 80px;
+        font-size: 13px;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin: 0px auto;
+        margin-bottom: 6px;
+        height: 36px;
+    }
+    .task1-body{
+        padding-right:10px;
+       /* border:1px solid red;*/
+    }
+
+    .task2{
+       /* border:1px solid red;*/
+    }
+    .task2-item-left{
+        width: 80px;
+        margin: 10px 10px 10px 0px;
+        height: 80px;
+        float:left;
+        background-image:url(../../aset/example4/album.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .task2-item-right{
+       overflow: hidden;
+        position:relative;
+        height: 104px;
+        line-height: 104px;
+        padding-right: 74px;
+        font-size:12px;
+    }
+    .task2-item-right-inline{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    .task2-item-right-txt{
+        font-size: 17px;
+        line-height: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin: 0px auto;
+        margin-bottom: 6px;
+        height: 17px;
+    }
+    .task2-item-right span{
+        color:red;
+    }
+    .task2-item-right-value{
+        overflow: hidden;
+        text-overflow: clip;
+        float: right;
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+        text-align: center;
+    }
+     .figure img{
+         width: 100%;
+         height: 100%;
+     }
+
+    .task-pic{
+        width: 65px;
+        height: 65px;
+        float: left;
+        margin: 10px 10px 10px 0px;
+    }
+    .task-pic img{
+        width: 100%;
+        height: 100%;
+    }
+    .cnt{
+        position:relative;
+        overflow: hidden;
+        line-height: normal;
+        vertical-align: middle;
+        line-height: 85px;
+        height: 85px;
+        margin-right:60px;
+    }
+    .cnt1{
+        font-size:14px;
+        line-height:18px;
+    }
+    .cnt2{
+       font-size:12px;
+       line-height:16px;
+        color:#888888;
+        margin-top:2px;
+    }
+    .task3-li{
+        position: relative;
+      /*  border:1px solid red;*/
+        line-height:85px;
+        margin: 0px 10px;
+        border-bottom: 1px solid #f1f2f3;
+    }
+    .task3-txt{
+        display: inline-block;
+        margin-top: 13px;
+        line-height: normal;
+        font-size:0px;
+    }
+    .f-thide {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .f-thide2 {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-item{
+        flex: 1;
+        padding-left: 10px;
+    }
+    .flex-item-text{
+        height: 18px;
+        -webkit-line-clamp: 1;
+    }
+    .task2-item-first{
+        display: inline-block;
+        float: left;
+        line-height: 104px;
+        width: 38px;
+        text-align: center;
+    }
+        .top-container{
+            background-color: #fff;
+        }
+        .bottom-container{
+            background-color: #fff;
+        }
+        .task2-container{
+            margin-top:10px;
+            padding-top:5px;
+        }
+        .value-a{
+            font-size:13px;
+            color:#d33a31;
+            border: 1px solid #d33a31;
+            dispaly: inline;
+            display: inline-block;
+            width: 54px;
+            line-height: 29px;
+            border-radius: 4px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+        .task3-right{
+            line-height: 85px;
+            height: 85px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .task-right-txt{
+            line-height: normal;
+            margin-top: 13px;
+        }
+        .ib{
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="top-container">
+    <div class="title">高级定制耳机 ></div>
+    <div class="task1-body">
+        <div class="task1">
+            <div class="task1-item">
+                <div class="task1-item-content">
+                </div>
+                <div class="task1-item-title">
+                    <div class="task1-item-text">
+                      \(^o^)/~( ⊙ o ⊙ )啊！yeah
+                    </div>
+                    <span style="color:red;">￥7867</span>
+                 </div>
+            </div>
+            <div class="task1-item">
+                <div class="task1-item-content">
+                </div>
+                <div class="task1-item-title">
+                    <div class="task1-item-text">
+                        table-cell 百分比
+                    </div>
+                    <span style="color:red;">￥7867</span>
+                </div>
+            </div>
+            <div class="task1-item">
+                <div class="task1-item-content">
+                </div>
+                <div class="task1-item-title">
+                    <div class="task1-item-text">
+                        单独
+                    </div>
+                    <span style="color:red;">￥7867</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task1-body">
+    <div class="task1">
+        <div class="task1 flex">
+            <div class=" flex-item">
+                <div class="task1-item-content">
+                </div>
+                <div class="task1-item-title">
+                    <div class="task1-item-text flex-item-text">
+                        乐视薯片周杰伦
+                    </div>
+                    <span style="color:red;">￥7867</span>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="task1-item-content">
+                </div>
+                <div class="task1-item-title">
+                    <div class="task1-item-text flex-item-text">
+                        flex 等宽
+                    </div>
+                    <span style="color:red;">￥7867</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+<div class="bottom-container" style="margin-bottom: 15px;">
+    <div class="task2-container">
+        <div class="task2 clear">
+            <div>
+                <span class="task2-item-first">1</span>
+                <div class="task2-item-left"></div>
+                <div class="task2-item-right">
+                    <div class="task2-item-right-inline">
+                        <h3  class="task2-item-right-txt">我选择做采访记者的一部分原因也是想尽可能多地跟人接触，听他们的故事，生活永远比小说更离奇。</h3>
+                        <span >白色</span> <>线控版</span>
+                    </div>
+                    <div class="task2-item-right-value">
+                        <a class="value-a"> 赞赏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task2 clear">
+            <div>
+                <span class="task2-item-first">2</span>
+                <div class="task2-item-left"></div>
+                <div class="task2-item-right">
+                    <div class="task2-item-right-inline">
+                        <h3  class="task2-item-right-txt">各种平凡的食材丢进烤箱</h3>
+                        <span>白色</span> <span>线控版</span>
+                    </div>
+                    <div class="task2-item-right-value">
+                       <a class="value-a"> 赞赏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task2 clear">
+            <div>
+                <span class="task2-item-first">3</span>
+                <div class="task2-item-left"></div>
+                <div class="task2-item-right">
+                    <div class="task2-item-right-inline">
+                        <h3  class="task2-item-right-txt">也能让色香味上一层楼</h3>
+                        <span>白色</span> <span>线控版</span>
+                    </div>
+                    <div class="task2-item-right-value">
+                        <a class="value-a"> 赞赏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-container">
+    <div class="task3">
+    <div class="task3-content">
+        <ul>
+            <li class="task3-li clear">
+                <figure class="task-pic">
+                    <img src="http://p3.music.126.net/XS4MxBfdhf59qL6W9RkyAQ==/18555358232018814.jpg?param=140x9999&amp;quality=75" >
+                </figure>
+                <div class="cnt ">
+                    <article class="task3-txt">
+                        <p class="cnt1 f-thide2">让我留在你身边让我留在你身边让我留在你身边让我留在你身边</p>
+                        <span class="cnt2 f-thide ib">陈奕迅</span> <span class="cnt2 f-thide ib" style="margin-left: 10px;">陈奕迅</span>
+                    </article>
+                </div>
+                <div  class="task3-right">
+                    <div class="task-right-txt">
+                        <p  class="cnt1 " style="line-height: 18px">￥123</p>
+                        <p  class="cnt2 "   style="">x 1</p>
+                     </div>
+                </div>
+            </li>
+            <li class="task3-li clear">
+                <figure class="task-pic">
+                    <img src="http://p3.music.126.net/XS4MxBfdhf59qL6W9RkyAQ==/18555358232018814.jpg?param=140x9999&amp;quality=75" >
+                </figure>
+                <div class="cnt ">
+                    <article class="task3-txt">
+                        <p class="cnt1 f-thide2">欧拉公式</p>
+                        <span class="cnt2 f-thide ib">陈奕迅</span> <span class="cnt2 f-thide ib" style="margin-left: 10px;">陈奕迅</span>
+                    </article>
+                </div>
+                <div  class="task3-right">
+                    <div class="task-right-txt">
+                        <p  class="cnt1 " style="line-height: 18px">￥123</p>
+                        <p  class="cnt2 "   style="">x 1</p>
+                    </div>
+                </div>
+            </li>
+            <li class="task3-li clear">
+                <figure class="task-pic">
+                    <img src="http://p3.music.126.net/XS4MxBfdhf59qL6W9RkyAQ==/18555358232018814.jpg?param=140x9999&amp;quality=75" >
+                </figure>
+                <div class="cnt ">
+                    <article class="task3-txt">
+                        <p class="cnt1 f-thide2">咚咚锵</p>
+                        <span class="cnt2 f-thide ib">陈奕迅</span> <span class="cnt2 f-thide ib" style="margin-left: 10px;">陈奕迅x1</span>
+                    </article>
+                </div>
+                <div  class="task3-right">
+                    <div class="task-right-txt">
+                        <p  class="cnt1 " style="line-height: 18px">￥123</p>
+                        <p  class="cnt2 "   style="">x 1</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<style>
+.title-in{
+    font-size:16px;
+    color:#4e4e4e;
+    margin:20px auto;
+    padding: 0px 7.5px ;
+    width: 145px;
+    position:relative;
+}
+    .title-in:before{
+        content: '';
+        border-top: 1px solid #000;
+        width: 1000px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: calc(100%);
+        opacity: 0.1;
+    }
+    .title-in:after{
+        content: '';
+        border-top: 1px solid #000;
+        width: 1000px;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: calc(100%);
+        opacity: 0.1;
+    }
+    .title-second{
+        height:50px;
+        line-height:50px;
+        background-color:#e5e6e7;
+        font-size:13px;
+        color:#666666;
+    }
+    .f-thide {
+        overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    }
+    .ft1{
+        font-size:16px;
+        color:#333333;
+        line-height: 16px;
+    }
+    .ft2{
+        font-size:12px;
+        color:#afafb0;
+        line-height: 12px;
+        margin-top:6px;
+    }
+    .last{
+        margin-bottom: 150px;
+    }
+    .last li{
+        height:55px;
+        line-height:55px;
+        font-size:0px;
+        border-bottom:1px solid #d3d5dc;
+    }
+    .last-container{
+        display:inline-block;
+        line-height:normal;
+        vertical-align: middle;
+        width: 99%;
+    }
+</style>
+
+<div class="title-in">
+    以下好友以为他助力
+</div>
+<div class="title-second">
+    本月播放（3）
+</div>
+<div class="last">
+    <ul>
+        <li>
+            <div class="last-container">
+                <p class="f-thide ft1">忽然想起你</p>
+                <p class="f-thide ft2">
+                    萧亚 - 一个人的精彩
+                </p>
+             </div>
+        </li>
+        <li>
+            <div class="last-container">
+                <p class="f-thide ft1">我好想你凌锥及压线工具都是首选凌锥及压线工具都是首选</p>
+                <p class="f-thide ft2">
+                  苏打蓝 - 我拉阿拉
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="last-container">
+                <p class="f-thide ft1">忽然想起你</p>
+                <p class="f-thide ft2">
+                   晴天 - 哦啊实打实的三打三打算打打多岁的所得税dasdasdd德国索林根和美国
+                </p>
+             </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <style>
+        .body{
+            background-color: aliceblue;
+            width:100%;
+            height:100vh;
+        }
+        .aside,
+        .aside-overlay {
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+        }
+        .aside {
+            -webkit-transition: visibility .25s;
+            transition: visibility .25s;
+            z-index: 3;
+            visibility: hidden;
+            overflow: hidden;
+        }
+        .aside.active {
+            -webkit-transition: none;
+            transition: none;
+            visibility: visible;
+        }
+        .aside-overlay {
+            background-color: black;
+            opacity: 0;
+            -webkit-transition: opacity .25s;
+            transition: opacity .25s;
+        }
+        .mask{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0;
+            -webkit-transition: opacity .25s;
+            transition: opacity .25s;
+            opacity: .6;
+        }
+        .aside > .content{
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+        .aside-content {
+            position: absolute;
+            bottom: 0; right: 0;
+            background-color: white;
+            -webkit-transition: transform .15s;
+            transition: transform .15s;
+            left: 0px; top:120px;
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        .active > .aside-content {
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+        .scroll{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 44px;
+            bottom: 92px;
+            overflow: auto;
+        }
+        .footer{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .hideAside{
+            width: 100%;
+        }
+    </style>
+    <script src="../js/jQuery-2.2.0.min.js"></script>
+
+</head>
+<body>
+
+<div class="body">
+    <button id="button">点我</button>
+</div>
+<aside id="aside" class="aside">
+    <i class="mask"></i>
+    <div class="aside-content">
+        xxxxxxxxxsdsadasdas
+        <div class="scroll">
+            <ul>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+            </ul>
+        </div>
+        <div class="footer">
+             <button class="hideAside" style="height:92px;">关闭</button>
+        </div>
+    </div>
+</aside>
+<script>
+
+    var elButton = $('#button'), elButtonWith = $('#buttonWith');
+    var elAside = $('#aside');
+    elButton.on('click', function () {
+        elAside.addClass('active');
+        $('html').addClass('noscroll');
+    });
+    elButtonWith.on('click', function() {
+        elAside.addClass('active');
+        $.smartScroll(elAside, '.scrollable');
+        elButton.html(elButton.html().replace('没有', '已经'));
+        $('html').addClass('noscroll');
+    });
+
+    $('.hideAside').on('click', function () {
+        $('html').removeClass('noscroll');
+        elAside.removeClass('active');
+    });
+</script>
+</body>
+</html>

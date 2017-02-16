@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <style>
+        .mask{
+            background-color: #000000;
+            opacity:0.8;
+            position:absolute;
+            top:0px;
+            left:0px;
+            bottom:0px;
+            right:0px;
+            width:100%;
+            height:100%;
+            z-index:99;
+        }
+        .content{
+            max-height: 100vh;
+            color:red;
+            font-size:16px;
+            text-align:center;
+            line-height:12px;
+            overflow-y: auto;
+            padding: 0 20px 60px 20px;
+        }
+        .h1{
+            height: 86px;
+            padding: 32px;
+            box-sizing: border-box;
+            line-height: 22px;
+            text-align: center;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        .content li{
+            margin-bottom: 1em;
+            line-height: 23px;
+            font-size: 15px;
+            margin-left: 16px;
+            list-style: decimal outside;
+        }
+        .footer{
+            position:fixed;
+            bottom:0px;
+            width:100%;
+            font-size: 20px;
+            text-align: center;
+            border-top: 1px solid red;
+            line-height: 60px;
+
+            z-index: 2;
+            color: red;
+            background-color: #000000;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+<div class="mask">
+        <div class="content">
+            <h1 class="h1">tips</h1>
+            <ul>
+                <li>每天晚上在便笺卡上写下三件第二天必须要做的事。每天早上，从最容易的那件事开始做到最难的那件，并在上午 11 点前解决它们。如果你每天都这么做，你就能生活得更快乐</li>
+                <li>最重要的还是阶段性找到自己要想明白的问题，多看这一个领域的资料，把问题想透，其实比每天吃大量的信息烟尘更重要</li>
+                <li>洗冷水澡：闭上眼想像成是在瀑布下的修行。</li>
+                <li>大大的安利一下 Sketch，在移動端的設計上面優勢巨大，資深產品夠確實可以投入 $99。</li>
+                <li>我希望能有带显示器的咖啡馆，背个笔记本插上就能干活。更理想的状况是到处都有 Mac Pro，我插个 SSD 上去就好了。</li>
+                <li>关于如何开始游戏设计，最好的方式就是从实践中学习，非常多优秀的设计者都是自己摸索出来的。但是一开始的 scope 不要定太大，用巧妙的设计施展自己的长处，规避缺点，从小游戏做起</li>
+                <li>最重要的还是阶段性找到自己要想明白的问题，多看这一个领域的资料，把问题想透，其实比每天吃大量的信息烟尘更重要。</li>
+            </ul>
+        </div>
+    <section class="footer">
+        <a >
+            我知道了
+        </a>
+
+    </section>
+</div>
+</body>
+</html>
