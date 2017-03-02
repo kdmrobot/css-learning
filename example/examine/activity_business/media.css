@@ -1,0 +1,97 @@
+
+/* @Media & for UI fix */
+/*-----------------------------------------------------*/
+
+/* for android, android大部分机子设备宽度>=360px & <414px  */
+@media screen and (min-width:360px){
+
+}
+/* for ip5  */
+@media screen and (min-width:320px) and (max-width:320px){
+
+}
+
+/* for ip6 & ip6 UI fix */
+@media screen and (min-width:375px) and (max-width:375px){
+
+}
+
+/* for ip6+  */
+@media screen and (min-width:414px){
+
+}
+
+/* for ipad and ipad mini  */
+@media screen and (min-width:768px){
+
+}
+
+/* for dpr >= 2倍屏 */
+@media screen and (-webkit-min-device-pixel-ratio:2){
+
+}
+/* for dpr >= 3倍屏 andord1080， iphone6+ */
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .top {
+        padding-top: 66%;
+        position: relative;
+        background: url(../../aset/example/assistance_activity/title_3x.png) no-repeat;
+        background-size: 100%;
+    }
+    .login{
+        position: absolute;
+        background: url(../../aset/example/icons.png) no-repeat;
+        background-size: 262px 267px;
+        background-position: 0px -237px;
+        width: 93px;
+        height: 18px;
+        left: 10px;
+        top: 10px;
+    }
+    .question{
+        position: absolute;
+        background: url(../../aset/example/icons.png) no-repeat;
+        background-size: 262px 267px;
+        background-position: -58px -196px;
+        width: 26px;
+        height: 33px;
+        right: 10px;
+        top: 10px;
+    }
+    .footer div{
+        width: 254px;
+        height: 6px;
+        background: url(../../aset/example/assistance_activity/footer_3x.png) no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        line-height: 6px;
+    }
+    .end{
+        position: absolute;
+        background: url(../../aset/example/icons.png) no-repeat;
+        background-size: 262px 267px;
+        background-position: -34px -203px;
+        width: 17px;
+        height: 25px;
+        right: -8px;
+        top: -18px;
+    }
+    .shallot{
+        position: absolute;
+        background: url(../../aset/example/icons.png) no-repeat;
+        background-size: 262px 267px;
+        background-position: 0px -189px;
+        width: 26px;
+        height: 40px;
+        right: 47%;
+        top: -20px;
+    }
+}
+
+
+/* Grid for Web */
+@media screen and (min-width:600px){
+    .g-web{width:600px; margin:0 auto;}
+    .g-web-sep{width:100%;}
+    .g-web-sep .g-main{width:600px; margin:0 auto;}
+}

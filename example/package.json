@@ -1,0 +1,21 @@
+{
+  "name": "learning",
+  "version": "2.1.2",
+  "description": "state management for Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node examples/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vuex.git"
+  },
+  "author": "xxx",
+  "license": "MIT",
+  "bugs": {
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1",
+    "express": "^4.14.1"
+  }
+}

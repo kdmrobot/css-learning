@@ -1,0 +1,194 @@
+/* Webview Base.css */
+/*-----------------------------------------------------*/
+/*
+Style Rule Explanation
+---------------------------------------------------------
+f-:功能类，单属性 
+z-:状态类，可供JS调用，纯js调用请用"j-xxx"
+s-:背景调用,字色
+g-:布局
+*/
+
+/* Reset */
+/*-----------------------------------------------------*/
+html, body{
+	width:100%; height:100%; font-family:'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', sans-serif; font-size:12px; line-height:1.4; color:#333; 
+	/* 去字体不能小于12px，去点击蓝块, 禁弹系统菜单，文字不可选 */
+	-webkit-text-size-adjust:100%; -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-touch-callout:none; touch-callout:none; -webkit-user-select:none; user-select:none;
+	/* 打断中英文不换行问题 */
+	word-wrap:break-word; word-break:break-word; white-space:normal;
+}
+body{box-sizing:border-box;}
+html,body,img,iframe,button,input{border:0;}
+body,html,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,input,header,menu,section,figure,article{padding:0; margin:0;}
+textarea,select,input,button{font-size:inherit;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+em,i{font-style:normal;text-align:left;}
+li,i{list-style:none;}
+textarea{resize:none; overflow:auto;}
+input:focus,textarea:focus,button:focus, a[hidefocus]{outline:none;}
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance: none;}
+i svg{display:block; width:100%; height:100%;}
+svg{display:inline-block; width:100%; height:100%; fill:currentColor; font-family:inherit;}
+a,a:hover{text-decoration:none;}
+a, a *{cursor:pointer;}
+
+/* Function */
+/*-----------------------------------------------------*/
+/* box */
+.f-cb:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+.f-ib{display:inline-block;}
+.f-blk{display:block;}
+.f-blkfull{display:block; width:100%; height:100%;}
+.f-img{display:block; width:100%;}/* height:100% 在android3.4等机子上，会使图片拉长 */
+.f-oh{overflow:hidden;}
+.f-link{
+	display:block; position:absolute; top:0; left:0; width:100%; height:100%;
+	background-color:rgba(0, 0, 0, 0);/*fix ie click problem*/
+}
+.f-ph{opacity:0;}/* placeholder */
+/* position */
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-pa{position:absolute;}
+.f-fix{position:fixed;}
+/* align */
+.f-hc{position:absolute !important; left:50%; -webkit-transform:translateX(-50%); transform:translateX(-50%); }/* 左右居中 */
+.f-vc{position:absolute !important; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}/* 上下居中 */
+.f-cc{position:absolute !important; top:50%; left:50%; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%);}/* 上下左右 居中 */
+.f-fvc{
+	/* flex 多行居中排版，需要定高 */
+	display:-webkit-box; display:-webkit-flex; display:flex;
+	-webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; 
+	-webkit-box-orient:vertical; -webkit-box-direction:vertical; -webkit-flex-direction:column; flex-direction:column;
+}
+/* text */
+.f-tdu, .f-tdu:hover{ text-decoration:underline;}
+.f-pre{word-wrap:break-word; word-break:break-all;}
+.f-brkEng{word-break:break-all;}/* 优先打断英文，但是中文标点会连字 */
+.f-thide{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:normal;}
+.f-thide2, .f-thide3{overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.f-thide3{-webkit-line-clamp:3; }
+.f-nw{white-space:nowrap;}
+.f-tid{text-indent:-9999px;}
+.f-tc{text-align:center;}
+.f-tl{text-align:left;}
+.f-tr{text-align:right;}
+.f-hand{cursor:pointer;}
+.f-dft{cursor:default;}
+/* JS */
+.z-dis{pointer-events:none;}
+.f-hide,.j-hide{display:none !important;}
+.f-vhide,.j-vhide{visibility:hidden;}
+
+/*  1px解决文案：
+	优点：可画圆角，重置可变色；
+	缺点：安卓低端机边框可能会糊，会丢线；
+*/
+.f-bd, .u-face, .u-cover{position:relative;}
+.f-bd *, .u-face *, .u-cover *, .u-txt *{position:relative; z-index:1;}
+.f-bd:after, .u-face:after, .u-cover:after, .u-txt:after{
+	position:absolute; z-index:2; content:''; top:0; left:0; pointer-events:none; -webkit-box-sizing:border-box; box-sizing:border-box;
+	width:100%; height:100%; -webkit-transform-origin:top left; transform-origin:top left;
+	border-style:solid; border-color:rgba(0,0,0,0.10); border-width:0;
+}
+.f-bd-top:after{border-width:1px  0 0 0;}/* top */
+.f-bd-btm:after{border-width:0 0 1px 0;}/* bottom */
+.f-bd-tb:after{border-width:1px 0;}/* top and bottom */
+.f-bd-left:after{border-width:0 0 0 1px;}/* left */
+.f-bd-right:after{border-width:0 1px 0 0;}/* right */
+.f-bd-lr:after{border-width:0 1px;}/* left and right */
+.f-bd-full:after{border-width:1px;}/* full border */
+
+/* Font */
+/*-----------------------------------------------------*/
+.f-ff0{font-family:Arial, Helvetica, sans-serif;}/* for web */
+.f-ff1{font-family:simsun,\5b8b\4f53;}/* for web */
+.f-ff2{font-family:Microsoft Yahei, simsun, Arial, Helvetica, sans-serif;}/* for web */
+.f-fw0{font-weight:normal;}
+.f-fw1{font-weight:bold;}
+
+.f-fs9{font-size:9px;}
+.f-fs10{font-size:10px;}
+.f-fs11{font-size:11px;}
+.f-fs12{font-size:12px;}
+.f-fs13{font-size:13px;}
+.f-fs14{font-size:14px;}
+.f-fs15{font-size:15px;}
+.f-fs16{font-size:16px;}
+.f-fs17{font-size:17px;}
+.f-fs18{font-size:18px;}
+.f-fs19{font-size:19px;}
+.f-fs20{font-size:20px;}
+.f-fs30{font-size:30px;}
+.f-fs33{font-size:33px;}
+
+.s-fcFFF{color:#fff;}
+.s-fc000{color:#000;}
+.s-fc333{color:#333}
+.s-fc666{color:#666;}
+.s-fc888{color:#888;}
+.s-fc999{color:#999;}
+.s-fcAAA{color:#aaa;}
+.s-fcCCC{color:#ccc;}
+
+.s-fcMain{}/* 一级文本色 */
+.s-fcLink, a{color:#0c73c2;}/* 链接色 */
+.s-fcErr{}
+.s-fcWarn{}
+.s-fcThe{color:#d33a31;}/* app主题色 */
+.s-fcVip{color:#fe672e;}/* app 会员色 */
+
+/* Background Color */
+.s-bgc000{background-color:#000;}
+.s-bgcFFF{background-color:#fff;}
+.s-bgc0{background-color:#f1f2f3;}/* 有白块的背景色 */
+.s-bgc1{background-color:#f8f8f8;}/* 没有白块的背景色 */
+.s-bgc2{background-color:#f8faff;}/* 邀请页 */
+.s-bgc3{background-color:#fbfcfd;}/* app背景色 */
+
+
+/* @Media & for UI fix */
+/*-----------------------------------------------------*/
+
+/* for android, android大部分机子设备宽度>=360px & <414px  */
+@media screen and (min-width:360px){
+
+}
+
+/* for ip6 & ip6 UI fix */
+@media screen and (min-width:375px) and (max-width:375px){
+	
+}
+
+/* for ip6+  */
+@media screen and (min-width:414px){
+	
+}
+
+/* for ipad and ipad mini  */
+@media screen and (min-width:768px){
+	
+}
+
+/* for dpr >= 2倍屏 */
+@media screen and (-webkit-min-device-pixel-ratio:2){
+	.f-bd:after, .u-txt:after, .u-cover:after, .u-face:after{
+		width:200%; height:200%; -webkit-transform:scale(0.5); transform:scale(0.5); border-color:rgba(0,0,0,0.13);
+	}
+}
+/* for dpr >= 3倍屏 andord1080， iphone6+ */
+@media screen and (-webkit-min-device-pixel-ratio:3){
+	.f-bd:after, .u-txt:after, .u-cover:after, .u-face:after{
+		width:300%; height:300%; -webkit-transform:scale(0.333333); transform:scale(0.333333); border-color:rgba(0,0,0,0.16);
+	}
+}
+
+
+/* Grid for Web */
+@media screen and (min-width:600px){
+	 .g-web{width:600px; margin:0 auto;}
+	 .g-web-sep{width:100%;}
+	 .g-web-sep .g-main{width:600px; margin:0 auto;}
+}

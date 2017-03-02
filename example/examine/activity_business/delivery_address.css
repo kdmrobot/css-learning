@@ -1,0 +1,87 @@
+.main{
+    min-height:100%;
+    padding-bottom: 45px;
+    box-sizing: border-box;
+}
+.delevery-top{
+    height:60px;
+    background: url(../../aset/example/line_1.png) repeat-x left bottom;
+    background-size: 1px 1px;
+    position:relative;
+}
+.top-left{
+    width:46px;
+    float:left;
+    height:60px;
+    position:relative;
+}
+.waterdrop{
+    width:21px;
+    height:26px;
+    display: inline-block;
+}
+.top-right{
+    overflow: hidden;
+    height:60px;
+}
+.delivery-flow{
+    padding-top:27px;
+    position:relative;
+}
+.delivery-flow ul{
+    position:relative;
+}
+.flow-line-container{
+    position: absolute;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    height: 100%;
+    width: 46px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.flow-line{
+    height: 100%;
+    border-left: 1px dashed #ccc;
+}
+
+.delivery-flow .item{
+    line-height:20px;
+    height:56px;
+    position:relative;
+}
+.item-left{
+    width:46px;
+    float:left;
+    height:56px;
+    position:relative;
+}
+.dot-ing{
+    width:12px;
+    height:12px;
+    background: url(../../aset/example/daily_business/delevery-dot.png) no-repeat;
+    background-size: 100%;
+}
+.dot-ed{
+    width:12px;
+    height:12px;
+    background: url(../../aset/example/daily_business/delevery-doted.png) no-repeat;
+    background-size: 100%;
+}
+.item-right{
+    overflow: hidden;
+    height:56px;
+}
+
+.footer{
+    text-align: center;
+    margin-top: -45px;
+    padding-bottom: 15px;
+}
+.footer p{
+    line-height:15px;
+    font-size:11px;
+}
+.s-fcb2{
+    color:#b2b2b2;
+}

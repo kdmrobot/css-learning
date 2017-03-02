@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <style>
+        body{
+            background-color: #eeeff4;
+        }
+        .title{
+            height:40px;line-height: 40px;
+            background-color: #fdfdfe;
+        }
+        .title-item{
+            font-size:15px;
+            width:50%;
+            text-align: center;
+            line-height: 40px;
+            height:40px;
+        }
+        .title-item.select span{
+            line-height: 38px;
+            display: inline-block;
+            border-bottom: 2px solid #d33a31;
+        }
+        .select{
+            color:#d33a31;
+        }
+        .first:after{
+            content: '';
+            border-right: 1px solid #000;
+            width: 1px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            margin-top: -10px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    <div class=" f-fl f-pr title-item select first">
+        <span>包月</span>
+    </div>
+    <div class=" f-fl title-item">
+         <span>单曲购买</span>
+    </div>
+</div>
+
+
+<style>
+    .region{
+        margin:30px 10px 0px 10px;
+        border:1px solid #aeafb0;
+        border-radius: 4px;
+        height:28px;
+        line-height:28px;
+    }
+    .region-item{
+        height:28px;
+        font-size:14px;
+        color:#aeafb0;
+        float: left;
+        width: 33.3333%;
+        text-align: center;
+    }
+    .region-select{
+        color:white;
+        background-color: #999999;
+    }
+</style>
+<div class="region">
+    <div class=" f-fl f-pr region-item  ">
+        <span>近7日</span>
+    </div>
+    <div class=" f-fl region-item region-select">
+        <span>近30日</span>
+    </div>
+    <div class=" f-fl region-item">
+        <span>近一年</span>
+    </div>
+</div>
+<style>
+    .title-region{
+        font-size: 15px;
+        line-height: 27px;
+        color: #4e4e4e;
+        margin: 0px 10px;
+        position: relative;
+        text-align: center;
+        /*background-color: white;*/
+        margin-top: 30px;
+    }
+    .title-in{
+        font-size: 15px;
+        line-height: 27px;
+        color: #4e4e4e;
+        padding: 0px 4px;
+        position: relative;
+        text-align: center;
+        background-color:#eeeff4;
+        display: inline-block;
+    }
+    .line{
+        border-bottom: 1px solid #bebfc3;
+        width: 100%;
+        top: 50%;
+        box-sizing: border-box
+    }
+</style>
+<div class="title-region">
+    <div class="f-pa line"> </div>
+    <div class="title-in">
+        音乐包特权
+    </div>
+ </div>
+<style>
+    .bottom-line{
+        margin:30px 10px 0px  10px;
+        height:26px ;
+        line-height: 26px;
+    }
+    .left{
+        font-size:16px;
+        line-height:26px;
+        color:#333333;
+    }
+    .right{
+        font-size:12px;
+        line-height:20px;
+        margin-top:5px;
+        color:#1ea2ee;
+    }
+</style>
+
+<div class="bottom-line f-ovh">
+    <div class="f-ib f-fl left">音乐包专属歌曲</div>
+    <div class="f-ib f-fr right">查看全部专属歌曲</div>
+</div>
+
+
+</body>
+</html>
